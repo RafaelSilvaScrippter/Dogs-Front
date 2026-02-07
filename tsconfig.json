@@ -1,0 +1,12 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "esnext",
+    "strict": true,
+    "outDir": "dist",
+    "noImplicitReturns": true, 
+    "allowJs": true,   
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"],
+}
