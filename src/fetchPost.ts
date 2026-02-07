@@ -8,6 +8,7 @@ interface DataPhoto {
     nome:string;
     peso:string;
     src:string;
+    user_name:string;
     user_id:number;
     views:number;
     comentarios:[];
@@ -15,6 +16,7 @@ interface DataPhoto {
 export async function fetchPhoto(id:number){
     const response = await fetch(URL + `get/photo/${id}`)
     const dados:Record<string,DataPhoto> = await response.json();
+
     if(!dataMain) return
 
     dataMain.innerHTML = ''
@@ -26,7 +28,7 @@ export async function fetchPhoto(id:number){
         </div>
         <div class='modal-aside-dados'>
             <div class='author-e-views'>
-                <span class='author'>@${dados.post.user_id}</span>
+                <span class='author'>@${dados.post.user_name}</span>
                 <span class='views-modal'>${dados.post.views}</span>
             </div>
             <h2 class='titulo-modal'>${dados.post.nome}</h2>
