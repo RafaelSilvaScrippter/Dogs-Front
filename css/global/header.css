@@ -1,0 +1,17 @@
+.header-g{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link-header{
+    font-family:sans-serif,serif;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.link-header::after{
+    content: url("../../assets/usuario.svg");
+}
