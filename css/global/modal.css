@@ -15,7 +15,8 @@
 .modal-item{
    max-width: 100%;
     display: grid;
-    grid-template-columns: auto auto;
+    width: 700px;
+    grid-template-columns: auto 300px;
     align-content: center;
     justify-content: center;
     margin: 0 auto;

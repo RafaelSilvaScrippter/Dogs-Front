@@ -1,3 +1,5 @@
+import { fetchDados } from "./fetchPosts.js"
+
 export function modal(){
     const dataModal = document.querySelector('[data-main]')
     const dataConteudoModal = dataModal?.querySelector('[data-conteudo-modal]')
@@ -18,6 +20,7 @@ export function modal(){
                         if(e.target.contains(dataConteudoModal)){
                             dataModal.classList.remove('modal-on')
                             dataModal.style.display = 'none'
+                            fetchDados()
                         }
                     }
                 }

@@ -21,4 +21,5 @@
 .grid-final{
     cursor: initial;
     grid-column: 1 / -1;
+    z-index: -1;
 }
