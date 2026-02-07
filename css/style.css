@@ -2,3 +2,5 @@
 @import url("./reset.css");
 @import url("./global/reuse.css");
 @import url("./main/main.css");
+@import url("./global/modal.css");
+@import url("./global/titulo.css");
