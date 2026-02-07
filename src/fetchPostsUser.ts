@@ -23,7 +23,6 @@ export async function postUsers(){
         dataTituloAuthor.innerText = author
     if(!dataMainPosts) return
         dataMainPosts.innerHTML = ''
-        console.log(dados)
       dados.forEach((post) =>{
         dataMainPosts.innerHTML += /*HTML */ `
         <li class='div-photo-${post.id}'>
