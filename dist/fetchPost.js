@@ -4,7 +4,6 @@ const dataMain = document.querySelector('[data-main]');
 export async function fetchPhoto(id) {
     const response = await fetch(URL + `get/photo/${id}`);
     const dados = await response.json();
-    console.log(dados);
     if (!dataMain)
         return;
     dataMain.innerHTML = '';
@@ -16,7 +15,7 @@ export async function fetchPhoto(id) {
         </div>
         <div class='modal-aside-dados'>
             <div class='author-e-views'>
-                <span class='author'>@${dados.post.user_id}</span>
+                <span class='author'>@${dados.post.user_name}</span>
                 <span class='views-modal'>${dados.post.views}</span>
             </div>
             <h2 class='titulo-modal'>${dados.post.nome}</h2>

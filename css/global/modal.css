@@ -2,26 +2,35 @@
     z-index: 1;
     position: absolute;
     background-color: rgba(0,0,0,0.5);
-    width: 100%;
+    width: 90%;
+    max-width: 100%;
     height: 100vh;
+    padding-right: 1rem;
+    padding-left: 1rem;
     display: grid;
 }
 
 
 
 .modal-item{
-    width: 800px;
+   max-width: 100%;
     display: grid;
-    grid-template-columns: 2fr 300px;
+    grid-template-columns: auto auto;
     align-content: center;
     justify-content: center;
     margin: 0 auto;
 }
 
+@media(max-width:750px){
+    .modal-item{
+        max-width: 500px;
+        grid-template-columns: auto;
+    }
+}
+
 .modal-aside-dados{
     background-color: #f7f7f7;
     max-width: 800px;
-    width: 100%;
     padding: 1.2rem 1.4rem;
 }
 

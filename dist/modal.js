@@ -11,7 +11,7 @@ export function modal() {
                 if (dataModal.classList.contains('modal-on')) {
                     if (dataConteudoModal) {
                         if (e.target instanceof Node) {
-                            if (!dataConteudoModal.contains(e.target)) {
+                            if (e.target.contains(dataConteudoModal)) {
                                 dataModal.classList.remove('modal-on');
                                 dataModal.style.display = 'none';
                             }
