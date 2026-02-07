@@ -3,6 +3,7 @@
   "compilerOptions": {
     "target": "esnext",
     "strict": true,
+    "sourceMap": true,
     "outDir": "dist",
     "noImplicitReturns": true, 
     "allowJs": true,   
