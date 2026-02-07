@@ -17,3 +17,8 @@
     font-size: 2.5rem;
     position: relative;
 }
+
+.grid-final{
+    cursor: initial;
+    grid-column: 1 / -1;
+}

@@ -1,4 +1,5 @@
 
 import { fetchDados } from "./fetchPosts.js";
-import { modal } from "./modal.js";
+import { postUsers } from "./fetchPostsUser.js";
+postUsers()
 fetchDados()

@@ -28,7 +28,9 @@ export async function fetchPhoto(id:number){
         </div>
         <div class='modal-aside-dados'>
             <div class='author-e-views'>
-                <span class='author'>@${dados.post.user_name}</span>
+                <a href='../pages/author?${dados.post.user_name}.html'>
+                    <span class='author'>@${dados.post.user_name}</span>
+                </a>
                 <span class='views-modal'>${dados.post.views}</span>
             </div>
             <h2 class='titulo-modal'>${dados.post.nome}</h2>
