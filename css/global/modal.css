@@ -2,11 +2,9 @@
     z-index: 1;
     position: absolute;
     background-color: rgba(0,0,0,0.5);
-    width: 90%;
+    width: 100%;
     max-width: 100%;
     height: 100vh;
-    padding-right: 1rem;
-    padding-left: 1rem;
     display: grid;
 }
 
@@ -19,12 +17,14 @@
     grid-template-columns: auto 300px;
     align-content: center;
     justify-content: center;
-    margin: 0 auto;
+    margin: 3rem auto;
 }
 
 @media(max-width:750px){
     .modal-item{
-        max-width: 500px;
+        max-width: 350px;
+        padding-top: 2rem;
+        height: 80vh;
         grid-template-columns: auto;
     }
 }
