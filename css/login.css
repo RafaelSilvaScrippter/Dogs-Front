@@ -1,0 +1,116 @@
+
+.main-login{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items:center;
+}
+
+
+
+.div-login{
+    padding: 1rem 1.8rem;
+}
+
+@media(max-width:800px){
+    .bg-login{
+        display: none;
+    }
+
+    .main-login{
+        grid-template-columns: 1fr;
+    }
+}
+
+.formulario-login label{
+    margin: 0.3rem 0;
+    display: inline-block;
+}
+
+.formulario-login button{
+    background-color: #fb1;
+    color: #745509;
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    place-self: start;
+}
+
+.formulario-login input{
+    margin: 0.4rem 0;
+    padding: 0.8rem 1.8rem;
+    border-radius: 8px;
+    background-color: #eee;
+}
+
+.formulario-login button:hover{
+    box-shadow: 0px 0px 0px 2px #fcb400;
+    border: 2px solid #f3d078;
+}
+
+.formulario-login button{
+    border: 2px solid transparent;
+}
+
+.formulario-login{
+    display: grid;
+}
+
+
+.formulario-login input{
+    display: block;
+}
+
+.perdeu-senha{
+    color: #333;
+    position: relative;
+    margin: 2rem 0px;
+    display: inline-block;
+}
+
+.perdeu-senha::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0.05rem;
+    background-color: #000;
+}
+
+.cadastro{
+    margin-top: 3rem;
+    color: #333;
+}
+
+.titulo-cadastrase{
+    color: #333;
+    margin-bottom: 2.4rem;
+    font-size: 1.9rem;
+}
+
+.titulo-cadastrase::after{
+    content:"" ;
+    display: block;
+    border-radius: 0.7rem;
+    width: 4rem;
+    height: 1rem;
+    background-color: #eee;
+}
+
+.btn-cadastro{
+    padding: 0.8rem 0.8rem;
+    background-color: #fb1;
+    border: none;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #745509;
+    border-radius: 8px;
+    border: 2px solid transparent;
+}
+
+.btn-cadastro:hover{
+   box-shadow: 0px 0px 0px 2px #fcb400;
+    border: 2px solid #f3d078;
+}
