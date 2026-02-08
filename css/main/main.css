@@ -40,3 +40,7 @@
 .views-span::after{
     content: url("../../assets/visualizacao.svg");
 }
+
+.modal-aside-dados.bg-initial{
+    background-color: initial;
+}

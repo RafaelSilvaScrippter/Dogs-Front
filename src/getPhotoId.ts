@@ -1,6 +1,4 @@
-import { modal } from "./modal.js";
 import { URL } from "./url.js";
-const dataMain = document.querySelector('[data-main]')
 
 interface DataPhoto {
     id:number;
@@ -8,25 +6,26 @@ interface DataPhoto {
     nome:string;
     peso:string;
     src:string;
-    user_name:string;
     user_id:number;
+    user_name:string;
     views:number;
-    comentarios:[];
 }
-export async function fetchPhoto(id:number){
-    const response = await fetch(URL + `get/photo/${id}`)
-    const dados:Record<string,DataPhoto> = await response.json();
 
-    if(!dataMain) return
+export async function getPhotoId(){
+    const dataMainPhoto = document.querySelector('[data-main-photo]')
+    const url = window.location.search
+    const id = url.replace('?','').replace('.html','')
+    const response = await fetch(URL+`get/photo/${id}`)
+    const dados:Record<string,DataPhoto>  = await response.json()
+    
+    console.log(dados)
+    if(!dataMainPhoto) return
 
-    dataMain.innerHTML = ''
-    dataMain.innerHTML =/*HTML */ `
+    dataMainPhoto.innerHTML = /*HTML */`
 
-    <div data-conteudo-modal class='modal-item'>
-        <div class='photo-dog'>
-            <img src='https://dogs-srwx.onrender.com/send/${dados.post.src}' />
-        </div>
-        <div class='modal-aside-dados'>
+    <img src='${URL}send/${dados.post.src}' />
+
+      <div class='modal-aside-dados bg-initial'>
             <div class='author-e-views'>
                 <a href='../pages/author?${dados.post.user_name}.html'>
                     <span class='author'>@${dados.post.user_name}</span>
@@ -41,8 +40,6 @@ export async function fetchPhoto(id:number){
                 <span>${dados.post.idade} anos</span>
             </div>
         </div>
-    </div>
-        
+
     `
-    modal()
 }
