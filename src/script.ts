@@ -1,4 +1,5 @@
 
+import { criarConta } from "./fetchCreateCount.js";
 import { fetchLogin } from "./fetchLogin.js";
 import { fetchDados } from "./fetchPosts.js";
 import { postUsers } from "./fetchPostsUser.js";
@@ -7,10 +8,10 @@ import { getPhotoId } from "./getPhotoId.js";
 
 
 
-    getPhotoId()
-    fetchDados()
-    paramUser()
-
+getPhotoId()
+fetchDados()
+paramUser()
+criarConta()
 postUsers()
 fetchLogin()
 

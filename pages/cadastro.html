@@ -19,17 +19,22 @@
         </div>
         <div class="div-login">
 
-            <h1 class="titulo-modal">Login</h1>
-            <form class="formulario-login"  method="post">
-                <label for="usuario">Email</label>
-                <input type="text" name="usuario" id="usuario">
+            <h1 class="titulo-modal">Cadastra-se</h1>
+            <form data-create-form class="formulario-login"  method="post">
+                <label for="usuario">Usuário</label>
+                <input type="text" name="user_name" id="usuario">
+                <span data-error-usuario></span>
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email">
+                <span data-error-email></span>
                 <label for="senha">Senha</label>
-                <input type="password" name="senha" id="senha">
+                <input type="password" name="password" id="senha">
+                <span data-error-senha></span>
                 <button>Cadastrar</button>
+                <span data-erro-create></span>
             </form>
         </div>
     </main>
+    <script type="module" src="../dist/script.js"></script>
 </body>
 </html>
