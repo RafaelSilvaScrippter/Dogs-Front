@@ -1,4 +1,5 @@
 import { URL } from "./url.js";
+import { limparSpanErro, messageErrorElement, validarInputs } from "./validarInput.js";
 
 export  function fetchLogin(){
     const formLogin = document.querySelector('[data-login]');
@@ -11,34 +12,33 @@ export  function fetchLogin(){
     if(formLogin instanceof HTMLFormElement){
         formLogin?.addEventListener('submit',(e) => {
             e.preventDefault()
-            validarInput()
+            enviarForm()
         })
     }
 
-    function validarInput(){
+    function enviarForm(){
         const email = formLogin?.querySelector('input[type="email"]')
         const password = formLogin?.querySelector('input[type="password"]')
-        if(email instanceof HTMLInputElement && email.value.length === 0){
-            if(dataSpanEmail instanceof HTMLElement){
-                dataSpanEmail.style.color = 'red'
-                dataSpanEmail.innerText = 'Preencha esse campo'
-            }
-        }else{
-             if(dataSpanEmail instanceof HTMLElement){
-
-                dataSpanEmail.innerText = ''
+       
+        if(email instanceof HTMLInputElement){
+            if(!validarInputs(email)){
+                if(dataSpanEmail instanceof HTMLElement){
+                    messageErrorElement(dataSpanEmail,'preencha esse campo')
+                }
+            }else{
+                if(dataSpanEmail instanceof HTMLElement)
+                limparSpanErro(dataSpanEmail)
             }
         }
+        if(password instanceof HTMLInputElement){
+            if(!validarInputs(password)){
+                if(dataSpanSenha instanceof HTMLElement){
+                    messageErrorElement(dataSpanSenha,'preencha esse campo')
 
-        if(password instanceof HTMLInputElement && password.value.length === 0){
-            if(dataSpanSenha instanceof HTMLElement){
-                dataSpanSenha.style.color = 'red'
-                dataSpanSenha.innerText = 'Preencha esse campo'
-            }
-        }else{
-             if(dataSpanSenha instanceof HTMLElement){
-
-                dataSpanSenha.innerText = ''
+                }
+            }else{
+                if(dataSpanSenha instanceof HTMLElement)
+                limparSpanErro(dataSpanSenha)
             }
         }
 
@@ -74,9 +74,7 @@ export  function fetchLogin(){
         if(response && response.status === 404){
             if(dataErroLogin && dataErroLogin instanceof HTMLElement && dados){
                 if('message' in dados){
-                    dataErroLogin.innerText = dados.message
-                    dataErroLogin.style.color  = 'red'
-                    dataErroLogin.style.margin = '1rem 0' 
+                    messageErrorElement(dataErroLogin,dados.message) 
                 }
                 
             }
