@@ -1,10 +1,16 @@
 
+import { fetchLogin } from "./fetchLogin.js";
 import { fetchDados } from "./fetchPosts.js";
 import { postUsers } from "./fetchPostsUser.js";
 import { paramUser } from "./getParamUser.js";
 import { getPhotoId } from "./getPhotoId.js";
 
-getPhotoId()
+
+
+    getPhotoId()
+    fetchDados()
+    paramUser()
+
 postUsers()
-paramUser()
-fetchDados()
+fetchLogin()
+

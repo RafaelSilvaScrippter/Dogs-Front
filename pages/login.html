@@ -20,12 +20,15 @@
         <div class="div-login">
 
             <h1 class="titulo-modal">Login</h1>
-            <form class="formulario-login"  method="post">
+            <form data-login class="formulario-login"  method="post">
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email">
+                <span data-erro-email></span>
                 <label for="senha">Senha</label>
-                <input type="password" name="senha" id="senha">
+                <input type="password" name="password" id="senha">
+                <span data-erro-senha></span>
                 <button>Entrar</button>
+                <span data-erro-login></span>
             </form>
 
             <a href="./resetarSenha.html" class="perdeu-senha">Perdeu a Senha?</a>
@@ -39,5 +42,6 @@
             </div>
         </div>
     </main>
+    <script type="module" src="../dist/script.js"></script>
 </body>
 </html>
