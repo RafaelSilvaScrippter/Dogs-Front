@@ -1,9 +1,11 @@
+import { fetchLogin } from "./fetchLogin.js";
 import { fetchDados } from "./fetchPosts.js";
 import { postUsers } from "./fetchPostsUser.js";
 import { paramUser } from "./getParamUser.js";
 import { getPhotoId } from "./getPhotoId.js";
 getPhotoId();
-postUsers();
-paramUser();
 fetchDados();
+paramUser();
+postUsers();
+fetchLogin();
 //# sourceMappingURL=script.js.map
