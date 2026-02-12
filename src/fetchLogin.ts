@@ -58,7 +58,6 @@ export  function fetchLogin(){
         }
         const data = Object.fromEntries(form)
         const dados = await postFetch('auth/login',data)
-        console.log(dados)
         if(dados === false){
             if(dataErroLogin && dataErroLogin instanceof HTMLElement){
                 erroPostElement(dataErroLogin,'usuário ou senha incorretos')       
