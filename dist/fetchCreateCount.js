@@ -1,4 +1,4 @@
-import { URL } from "./url.js";
+import { erroPostElement, postFetch } from "./postReuse.js";
 import { limparSpanErro, messageErrorElement, validarInputs } from "./validarInput.js";
 export async function criarConta() {
     const dataCreateForm = document.querySelector('[data-create-form]');
@@ -63,24 +63,15 @@ export async function criarConta() {
         if (dataCreateForm instanceof HTMLFormElement) {
             const formData = new FormData(dataCreateForm);
             const data = Object.fromEntries(formData);
-            const response = await fetch(URL + 'auth/create', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            });
-            const dados = await response.json();
-            if (response.status === 400) {
+            const dados = await postFetch('auth/create', data);
+            if (dados === false) {
                 if (dataErroCreate && dataErroCreate instanceof HTMLElement) {
-                    dataErroCreate.style.color = 'red';
-                    dataErroCreate.style.margin = '0.6rem 0';
+                    erroPostElement(dataErroCreate, 'erro ao criar usuário');
                 }
             }
             else {
                 window.location.href = '../pages/perfil/perfil.html';
             }
-            console.log(dados);
         }
     }
 }

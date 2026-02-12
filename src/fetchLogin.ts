@@ -1,3 +1,4 @@
+import { erroPostElement, postFetch } from "./postReuse.js";
 import { URL } from "./url.js";
 import { limparSpanErro, messageErrorElement, validarInputs } from "./validarInput.js";
 
@@ -56,28 +57,14 @@ export  function fetchLogin(){
             form = new FormData(formLogin)
         }
         const data = Object.fromEntries(form)
-        const response = await fetch(URL+'auth/login',{
-            method:'POST',
-            headers:{
-                'Content-Type':'application/json'
-            },
-            body:JSON.stringify(data)
-        })
-
-
-        const dados = await response.json();
-
-        if(response.status !== 404){
+        const dados = await postFetch('auth/login',data)
+        console.log(dados)
+        if(dados === false){
+            if(dataErroLogin && dataErroLogin instanceof HTMLElement){
+                erroPostElement(dataErroLogin,'usuário ou senha incorretos')       
+            }
+        }else{
             window.location.href = '../pages/perfil/perfil.html'
         }
-
-        if(response && response.status === 404){
-            if(dataErroLogin && dataErroLogin instanceof HTMLElement && dados){
-                if('message' in dados){
-                    messageErrorElement(dataErroLogin,dados.message) 
-                }
-                
-            }
-            }
     }
 }
