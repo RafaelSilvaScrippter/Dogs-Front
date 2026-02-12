@@ -16,7 +16,7 @@ export async function postFetch<T>(path:string,data:DataForm):Promise<boolean | 
     })
 
     console.log(response.status)
-    if(response.status === 400 || response.status !== 404){
+    if(response.status === 400 || response.status === 404){
         return false
     }else{   
         return response.json();
