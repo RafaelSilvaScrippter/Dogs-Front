@@ -1,0 +1,121 @@
+.menu-account{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.menu-account li{
+    background-color: #eee;
+    padding: .4rem 0.4rem;
+    border-radius: 0.2rem;
+}
+
+.menu-account li:hover{
+    cursor: pointer;
+}
+
+.menu-account li.ativo-menu-account{
+    outline: 1px solid #fb1;
+    box-shadow: 0 0 6px 1px #fb1;
+    background-color: #fff;
+}
+
+.header-perfil{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr auto;
+}
+
+
+
+.menu-mobile{
+    padding: .4rem;
+    background-color: #eee;
+    width: 3rem;
+    cursor: pointer;
+    position: relative;
+    display:grid;
+    align-items: center;
+    gap: 0.7rem;
+    border-radius: .3rem;
+    height: 3rem;
+}
+
+.menu-mobile.ativo{
+    box-shadow: 0px 0px 8px 1px #fb1;
+    border: 1px solid #fb1;
+    display: flex;
+    justify-content: center;
+}
+
+
+.menu-mobile.ativo .bar-menu::after{
+    content: '';
+    width: 4px;
+    height: 4px;
+    background-color: #fb1;
+    border-radius: 8px;
+     box-shadow: 8px 0px 0px 0px #fb1 , -8px 0px 0px 0px #fb1;
+}
+
+
+.data-container-menu-mobile{
+    display: none;
+}
+
+@media(max-width:650px){
+    .data-container-menu-mobile{
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-account{
+        display: none;
+    }
+}
+
+.bar-menu{
+    border-radius: 100px;
+}
+
+.bar-menu::after{
+    content: "";
+    width: auto;
+    height: 2px;
+    display: block;
+    background-color: #333;
+    box-shadow: 0px 8px 0px 0px #333 , 0px -8px 0px 0px #333;
+}
+
+.conteudo-menu-mobile {
+    position: absolute;
+    left: -8rem;
+    background-color: #fff;
+    bottom: -13rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.6rem;
+    display: none;
+    width: 150px;
+    box-shadow: 0px 1px 2px #0003;
+}
+
+.conteudo-menu-mobile.ativo{
+    display: grid;
+}
+
+.conteudo-menu-mobile ul li:not(:last-child){
+    border-bottom: 1px solid #0003
+}
+
+.conteudo-menu-mobile ul li a{
+    display: flex;
+    margin: 0.2rem 0;
+    padding: 0.4rem 0;
+    color: #333;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.conteudo-menu-mobile ul li a:hover{
+    cursor: pointer;
+}
+
