@@ -2,6 +2,7 @@ import { URL } from "./url.js";
 export async function postFetch(path, data) {
     const response = await fetch(URL + path, {
         method: 'POST',
+        credentials: 'include',
         headers: {
             'Content-Type': 'application/json'
         },

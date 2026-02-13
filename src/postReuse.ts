@@ -8,6 +8,7 @@ interface DataForm {
 export async function postFetch<T>(path:string,data:DataForm):Promise<boolean | T>{
     const response = await fetch(URL+path,{
         method:'POST',
+        credentials:'include',
         headers:{
             'Content-Type':'application/json'
         },

@@ -5,9 +5,11 @@ import { fetchDados } from "./fetchPosts.js";
 import { postUsers } from "./fetchPostsUser.js";
 import { paramUser } from "./getParamUser.js";
 import { getPhotoId } from "./getPhotoId.js";
+import { getSession } from "./getSession.js";
 
 
 
+getSession()
 getPhotoId()
 fetchDados()
 paramUser()
