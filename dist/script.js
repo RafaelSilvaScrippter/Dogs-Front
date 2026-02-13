@@ -5,6 +5,8 @@ import { postUsers } from "./fetchPostsUser.js";
 import { paramUser } from "./getParamUser.js";
 import { getPhotoId } from "./getPhotoId.js";
 import { getSession } from "./getSession.js";
+import { menuMobile } from "./menuMobile.js";
+menuMobile();
 getSession();
 getPhotoId();
 fetchDados();
