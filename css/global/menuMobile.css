@@ -1,0 +1,27 @@
+.menu-account{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.menu-account li{
+    background-color: #eee;
+    padding: .4rem 0.4rem;
+    border-radius: 0.2rem;
+}
+
+.menu-account li:hover{
+    cursor: pointer;
+}
+
+.menu-account li.ativo-menu-account{
+    outline: 1px solid #fb1;
+    box-shadow: 0 0 6px 1px #fb1;
+    background-color: #fff;
+}
+
+.header-perfil{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr auto;
+}
+
