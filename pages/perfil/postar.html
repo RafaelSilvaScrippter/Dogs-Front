@@ -16,10 +16,10 @@
     <main class="container-g">
 
         <div class="header-perfil">
-            <h1 class="titulo-modal titulo-account">Minha Conta</h1>
+            <h1 class="titulo-modal titulo-account">Poste Sua Foto</h1>
             <div class="menu-mobile">
                 <ul class="menu-account">
-                    <li class="ativo-menu-account">
+                    <li>
                         <a href="./perfil.html">
                             <img src="../../assets/feed.svg" alt="">
                         </a>
@@ -29,7 +29,7 @@
                             <img src="../../assets/estatisticas.svg" alt="">
                         </a>
                     </li>
-                    <li>
+                    <li  class="ativo-menu-account">
                         <a href="./postar.html">
                             <img src="../../assets/adicionar.svg" alt="">
                         </a>
@@ -40,8 +40,16 @@
                 </ul>
             </div>
         </div>
-        <div class="container-g conteudo">
-
+        <div class="container-g conteudo postart-foto">
+            <form class="formulario-login" action="">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome">
+                <label for="peso">Peso</label>
+                <input type="text" id="peso" name="peso">
+                <label for="idade">Nome</label>
+                <input type="text" id="idade" name="idade">
+                <input type="file" name="file" id="file">
+            </form>
         </div>
     </main>
 </body>

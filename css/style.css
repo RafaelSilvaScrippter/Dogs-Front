@@ -6,6 +6,8 @@
 @import url("./global/titulo.css");
 @import url("./login.css");
 @import url("./global/input.css");
+@import url("./perfil/conta.css");
+@import url("./global/menuMobile.css");
 *{
     box-sizing: border-box;
 }

@@ -1,0 +1,18 @@
+.titulo-account{
+    font-size: 3rem;
+}
+
+.titulo-account::before{
+    content: '';
+    width: 1.7rem !important;
+    height: 1.7rem !important;
+}
+
+.postart-foto{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.postart-foto .formulario-login{
+    max-width: 35vw;
+}
