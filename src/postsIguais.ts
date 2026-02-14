@@ -15,15 +15,18 @@ export function dadosPOsts(dados:DataPhotos[]){
         if(!dataMainPosts) return
             dataMainPosts.innerHTML = ''
           dados.forEach((post) =>{
-            dataMainPosts.innerHTML += /*HTML */ `
-            <li class='div-photo-${post.id}'>
-                <div data-photo="${post.id}">
-                    <img class='img-${post.id}' src='https://dogs-srwx.onrender.com/send/${post.src}'/>
-                    <span class='views-span'>${post.views}</span>
-                </div>
-            </li>
-            `
-        })
+            if(dataMainPosts &&  typeof dados === 'object' && 'id' in dados && 'views' in dados){
+
+                dataMainPosts.innerHTML += /*HTML */ `
+                <li class='div-photo-${post.id}'>
+                    <div data-photo="${post.id}">
+                        <img class='img-${post.id}' src='https://dogs-srwx.onrender.com/send/${post.src}'/>
+                        <span class='views-span'>${post.views}</span>
+                    </div>
+                </li>
+                `
+            }
+            })
          const dataElementPhoto = dataMainPosts.querySelectorAll('[data-photo]')
     
           dataElementPhoto.forEach((item) =>{

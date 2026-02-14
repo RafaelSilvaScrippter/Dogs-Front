@@ -21,7 +21,21 @@ export async function getPhotoId(){
     console.log(dados)
     if(!dataMainPhoto) return
 
-    dataMainPhoto.innerHTML = /*HTML */`
+    if(dataMainPhoto &&
+        typeof dados === 'object' &&
+        'id' in dados.post && 
+        'idade' in dados.post &&
+        'nome' in dados.post && 
+        'peso' in dados.post && 
+        'src' in dados.post &&
+        'user_id' in dados.post && 
+        'user_name' in dados.post &&
+        'views' in dados.post
+
+     ){
+
+        
+        dataMainPhoto.innerHTML = /*HTML */`
 
     <img src='${URL}send/${dados.post.src}' />
 
@@ -34,12 +48,13 @@ export async function getPhotoId(){
             </div>
             <a href='../pages/photo?${dados.post.id}.html'>
                 <h2 class='titulo-modal'>${dados.post.nome}</h2>
-            </a>
-            <div class='dados-item-dog'>
+                </a>
+                <div class='dados-item-dog'>
                 <span class='barra-esq-dir'>${dados.post.peso} Kg</span>
                 <span>${dados.post.idade} anos</span>
-            </div>
-        </div>
-
-    `
+                </div>
+                </div>
+                
+                `
+    }
 }
