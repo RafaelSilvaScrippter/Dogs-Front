@@ -26,7 +26,7 @@ async isLogged():Promise<boolean>{
 
         if(this.element instanceof HTMLAnchorElement){
             if( await this.isLogged()){
-                this.element.href = '../pages/perfil/perfil.html'
+                this.element.href = '../perfil/perfil.html'
             }else{
                 
                 this.element.href = '../pages/login.html'
