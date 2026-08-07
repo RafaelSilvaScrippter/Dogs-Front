@@ -6,6 +6,7 @@ import { postUsers } from "./fetchPostsUser.js";
 import { paramUser } from "./getParamUser.js";
 import { getPhotoId } from "./getPhotoId.js";
 import { getSession } from "./getSession.js";
+import { LogoutPost } from "./logout.js";
 import { menuMobile } from "./menuMobile.js";
 import { RouteProtected } from "./protectRoute.js";
 
@@ -21,3 +22,7 @@ postUsers()
 fetchLogin()
 const protectedRoute = new RouteProtected('[data-header-link]')
 protectedRoute.init()
+
+const fetchLogout = new LogoutPost('[data-logout]')
+
+fetchLogout.init()
