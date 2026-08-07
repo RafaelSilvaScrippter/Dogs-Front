@@ -12,10 +12,10 @@ export function dadosPOsts(dados:DataPhotos[]){
 
        const dataMainPosts = document.querySelector('[data-main-posts]')
 
-        if(!dataMainPosts) return
-            dataMainPosts.innerHTML = ''
-          dados.forEach((post) =>{
-            if(dataMainPosts &&  typeof dados === 'object' && 'id' in dados && 'views' in dados){
+       if(!dataMainPosts) return
+       dataMainPosts.innerHTML = ''
+       dados.forEach((post) =>{
+           if(dataMainPosts &&  typeof dados === 'object' && 'id' in post && 'views' in post){
 
                 dataMainPosts.innerHTML += /*HTML */ `
                 <li class='div-photo-${post.id}'>
