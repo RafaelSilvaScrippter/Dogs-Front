@@ -19,7 +19,7 @@ export class RouteProtected {
     async changePathLinkHeader() {
         if (this.element instanceof HTMLAnchorElement) {
             if (await this.isLogged()) {
-                this.element.href = '../perfil/perfil.html';
+                this.element.href = '../../pages/perfil/perfil.html';
             }
             else {
                 this.element.href = '../pages/login.html';

@@ -10,11 +10,16 @@ export class LogoutPost{
     async fetchLogout(){
         const response = await fetch(URL + 'auth/logout',{
             method:'POST',
+            headers:{
+                'Content-Type':"application/json"
+            },
             credentials:'include',
             body:JSON.stringify({email:"rafa@gmail.com"})
         }) 
         const dados = await response.json()
 
+        window.location.pathname = '../index.html'
+        
         console.log(response,dados)
     }
 
