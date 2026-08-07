@@ -6,6 +6,7 @@ import { paramUser } from "./getParamUser.js";
 import { getPhotoId } from "./getPhotoId.js";
 import { getSession } from "./getSession.js";
 import { menuMobile } from "./menuMobile.js";
+import { RouteProtected } from "./protectRoute.js";
 menuMobile();
 getSession();
 getPhotoId();
@@ -14,4 +15,6 @@ paramUser();
 criarConta();
 postUsers();
 fetchLogin();
+const protectedRoute = new RouteProtected('[data-header-link]');
+protectedRoute.init();
 //# sourceMappingURL=script.js.map

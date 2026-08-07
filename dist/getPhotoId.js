@@ -9,6 +9,7 @@ export async function getPhotoId() {
     if (!dataMainPhoto)
         return;
     if (dataMainPhoto &&
+        typeof dados === 'object' &&
         'id' in dados.post &&
         'idade' in dados.post &&
         'nome' in dados.post &&
