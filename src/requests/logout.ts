@@ -1,4 +1,4 @@
-import { URL } from "./url.js";
+import { URL } from "../url.js";
 
 export class LogoutPost{
     element:NodeList | null;

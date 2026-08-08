@@ -1,0 +1,26 @@
+.input-env-commnet{
+    padding: 0.8rem 1rem;
+    background-color:#eee !important;
+    border: none;
+    outline: none;
+    max-width: 100%;
+    width: 100%;
+}
+.input-env-commnet:hover{
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+
+.div-content{
+    height: calc(100% - 60px);
+}
+
+.div-comment-input{
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    justify-content: space-between;
+    gap: 1rem;
+}

@@ -1,6 +1,6 @@
 
-import { dadosPOsts } from "./postsIguais.js";
-import { URL } from "./url.js";
+import { dadosPOsts } from "../postsIguais.js";
+import { URL } from "../url.js";
 
 interface DataPhotos {
     id:number;

@@ -8,6 +8,8 @@
 @import url("./global/input.css");
 @import url("./perfil/conta.css");
 @import url("./global/menu.css");
+@import url("./modalPhoto/modalPhoto.css");
+
 *{
     box-sizing: border-box;
 }

@@ -1,6 +1,6 @@
-import { erroPostElement, postFetch } from "./postReuse.js";
-import { URL } from "./url.js";
-import { limparSpanErro, messageErrorElement, validarInputs } from "./validarInput.js";
+import { erroPostElement, postFetch } from "../postReuse.js";
+import { URL } from "../url.js";
+import { limparSpanErro, messageErrorElement, validarInputs } from "../validarInput.js";
 
 export async function criarConta(){
     const dataCreateForm = document.querySelector('[data-create-form]')

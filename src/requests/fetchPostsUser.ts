@@ -1,7 +1,7 @@
 
-import { paramUser } from "./getParamUser.js";
-import { dadosPOsts } from "./postsIguais.js";
-import { URL } from "./url.js";
+import { paramUser } from "../getParamUser.js";
+import { dadosPOsts } from "../postsIguais.js";
+import { URL } from "../url.js";
 
 
 interface DataPhotos {

@@ -1,4 +1,4 @@
-import { fetchDados } from "./fetchPosts.js"
+import { fetchDados } from "./requests/fetchPosts.js"
 
 export function modal(){
     const dataModal = document.querySelector('[data-main]')
