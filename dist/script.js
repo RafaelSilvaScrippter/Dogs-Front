@@ -1,11 +1,11 @@
-import { criarConta } from "./fetchCreateCount.js";
-import { fetchLogin } from "./fetchLogin.js";
-import { fetchDados } from "./fetchPosts.js";
-import { postUsers } from "./fetchPostsUser.js";
+import { criarConta } from "./requests/fetchCreateCount.js";
+import { fetchLogin } from "./requests/fetchLogin.js";
+import { fetchDados } from "./requests/fetchPosts.js";
+import { postUsers } from "./requests/fetchPostsUser.js";
 import { paramUser } from "./getParamUser.js";
-import { getPhotoId } from "./getPhotoId.js";
-import { getSession } from "./getSession.js";
-import { LogoutPost } from "./logout.js";
+import { getPhotoId } from "./requests/getPhotoId.js";
+import { getSession } from "./requests/getSession.js";
+import { LogoutPost } from "./requests/logout.js";
 import { menuMobile } from "./menuMobile.js";
 import { RouteProtected } from "./protectRoute.js";
 menuMobile();

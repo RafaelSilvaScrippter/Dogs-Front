@@ -1,4 +1,4 @@
-import { fetchPhoto } from "./fetchPost.js";
+import { fetchPhoto } from "./requests/fetchPost.js";
 
 interface DataPhotos {
     id:number;

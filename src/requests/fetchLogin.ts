@@ -1,6 +1,5 @@
-import { erroPostElement, postFetch } from "./postReuse.js";
-import { URL } from "./url.js";
-import { limparSpanErro, messageErrorElement, validarInputs } from "./validarInput.js";
+import { erroPostElement, postFetch } from "../postReuse.js";
+import { limparSpanErro, messageErrorElement, validarInputs } from "../validarInput.js";
 
 export  function fetchLogin(){
     const formLogin = document.querySelector('[data-login]');

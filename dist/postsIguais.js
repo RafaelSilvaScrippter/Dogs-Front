@@ -1,4 +1,4 @@
-import { fetchPhoto } from "./fetchPost.js";
+import { fetchPhoto } from "./requests/fetchPost.js";
 export function dadosPOsts(dados) {
     const dataMainPosts = document.querySelector('[data-main-posts]');
     if (!dataMainPosts)

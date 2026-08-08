@@ -1,4 +1,4 @@
-import { getSession } from "./getSession.js";
+import { getSession } from "./requests/getSession.js";
 export class RouteProtected {
     element;
     constructor(element) {

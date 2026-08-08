@@ -1,4 +1,4 @@
-import { URL } from "./url.js";
+import { URL } from "../url.js";
 
 export async function getSession(){
     const response = await fetch(URL+'auth/session',{
