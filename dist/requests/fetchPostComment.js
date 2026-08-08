@@ -20,7 +20,7 @@ export class PostComments {
                 'Content-Type': "application/json"
             },
             credentials: 'include',
-            body: JSON.stringify({ comment: 'hello world' })
+            body: JSON.stringify({ comment: commentContent })
         });
         console.log(response);
         const dados = await response.json();
