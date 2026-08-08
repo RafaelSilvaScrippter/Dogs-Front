@@ -1,6 +1,7 @@
 import { modal } from "../modal.js";
 import { URL } from "../url.js";
 import { PostComments } from "./fetchPostComment.js";
+import { getSession } from "./getSession.js";
 const dataMain = document.querySelector('[data-main]')
 
 interface DataPhoto {
@@ -12,14 +13,13 @@ interface DataPhoto {
     user_name:string;
     user_id:number;
     views:number;
-    comentarios:[];
 }
 
 export async function fetchPhoto(id:number){
     const response = await fetch(URL + `get/photo/${id}`)
-    const dados:Record<string,DataPhoto> = await response.json();
-  console.log(dados)
-    
+    const dados:Record<string,DataPhoto> & Record<string,any> = await response.json();
+
+    console.log(dados.comentarios)
     if(!dataMain) return
 
     dataMain.innerHTML = ''
@@ -45,11 +45,22 @@ export async function fetchPhoto(id:number){
                     <span class='barra-esq-dir'>${dados.post.peso} Kg</span>
                     <span>${dados.post.idade} anos</span>
                 </div>
+                <div class="div-comentrarios">
+                    ${dados.comentarios.map((item:Record<string,any>) =>{
+                        return `<span>${item.user_name}:</span>` + `<p>${item.comment}</p>`  
+                    })}
+                </div>
             </div>
-            <div class='div-comment-input'>
-                <input data-input-comment class='input-env-commnet' type='text' name='comment' id='comment' />
-                <img data-env-comment src='../../../assets/enviar.svg'/>
-            </div>
+            ${await getSession() !== 404 ?
+            `
+                <div class='div-comment-input'>
+                    <input data-input-comment class='input-env-commnet' type='text' name='comment' id='comment' />
+                    <img data-env-comment src='../../../assets/enviar.svg'/>
+                </div>
+            `
+            :
+            ''
+            }
         </div>
     </div>
         

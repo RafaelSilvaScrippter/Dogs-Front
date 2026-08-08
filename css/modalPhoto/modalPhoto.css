@@ -24,3 +24,22 @@
     justify-content: space-between;
     gap: 1rem;
 }
+
+.div-comentrarios{
+    display: flex;
+    align-items: start;
+    gap: 0.2rem;
+    overflow-y: auto;
+    height: 20vh;
+    margin-top:1.7rem
+}
+
+.div-comentrarios span{
+    margin-right: 0.7rem;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.div-comentrarios p{
+    color: #333;
+}
