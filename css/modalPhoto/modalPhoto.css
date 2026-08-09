@@ -25,10 +25,15 @@
     gap: 1rem;
 }
 
-.div-comentrarios{
-    display: flex;
+.item-div-comment{
+display: flex;
     align-items: start;
     gap: 0.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.div-comentrarios{
+    
     overflow-y: auto;
     height: 20vh;
     margin-top:1.7rem

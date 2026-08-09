@@ -43,12 +43,12 @@ export async function getPhotoId(){
 
         <div data-conteudo-photo class='modal-aside-dados bg-initial'>
             <div class='author-e-views'>
-                <a href='../../pages/author.html?user=${dados.post.user_name}'>
+                <a href='../pages/author.html?user=${dados.post.user_name}'>
                     <span class='author'>@${dados.post.user_name}</span>
                 </a>
                 <span class='views-modal'>${dados.post.views}</span>
             </div>
-            <a href='../../pages/photo.html?id=${dados.post.id}'>
+            <a href='../pages/photo.html?id=${dados.post.id}'>
              <h2 class='titulo-modal'>${dados.post.nome}</h2>
             </a>
             <div class='dados-item-dog'>

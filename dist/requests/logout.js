@@ -5,7 +5,7 @@ export class LogoutPost {
         this.element = document.querySelectorAll(element);
     }
     async fetchLogout() {
-        const response = await fetch(URL + 'auth/logout', {
+        await fetch(URL + 'auth/logout', {
             method: 'POST',
             headers: {
                 'Content-Type': "application/json"
@@ -13,7 +13,6 @@ export class LogoutPost {
             credentials: 'include',
             body: JSON.stringify({ email: "rafa@gmail.com" })
         });
-        const dados = await response.json();
         window.location.pathname = '../index.html';
     }
     async eventsClickElement() {
@@ -24,7 +23,6 @@ export class LogoutPost {
         });
     }
     async init() {
-        console.log(this.element);
         await this.eventsClickElement();
     }
 }
