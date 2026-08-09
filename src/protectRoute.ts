@@ -1,23 +1,23 @@
 import { getSession } from "./requests/getSession.js";
 
 export class RouteProtected{
-    element:HTMLElement | null
+    element:HTMLElement | null;
     constructor(element:string){
-            this.element= document.querySelector(element)
+            this.element= document.querySelector(element);
     }
 
 async isLogged():Promise<boolean>{
 
-        const getSessionStatus = await getSession()
+        const getSessionStatus = await getSession();
 
         if(typeof getSessionStatus !== 'number'){
-            return false
+            return false;
         }
 
         if(getSessionStatus === 200){   
-            return true
+            return true;
         }else{
-            return false
+            return false;
         }
 
     }
@@ -26,10 +26,10 @@ async isLogged():Promise<boolean>{
 
         if(this.element instanceof HTMLAnchorElement){
             if( await this.isLogged()){
-                this.element.href = '../../pages/perfil/perfil.html'
+                this.element.href = '../../pages/perfil/perfil.html';
             }else{
                 
-                this.element.href = '../pages/login.html'
+                this.element.href = '../pages/login.html';
             }
         }
 
@@ -37,23 +37,23 @@ async isLogged():Promise<boolean>{
 
 
     async protected(){
-        const pathActual =window.location.pathname 
+        const pathActual =window.location.pathname; 
        if((pathActual.includes('login') || pathActual.includes('cadastro')) && await this.isLogged()){
-            window.location.href = '/pages/perfil/perfil.html'
+            window.location.href = '/pages/perfil/perfil.html';
         }
         
-        console.log(await this.isLogged())
+        console.log(await this.isLogged());
 
         if(pathActual.includes('/pages/perfil') &&  await this.isLogged() === false){
-            console.log('hell oworld')
-           window.location.href = '../../index.html'
+            console.log('hell oworld');
+           window.location.href = '../../index.html';
 
        }
     }
 
    async init(){
-        await this.changePathLinkHeader()
-        await this.protected()
+        await this.changePathLinkHeader();
+        await this.protected();
     }
 
 }

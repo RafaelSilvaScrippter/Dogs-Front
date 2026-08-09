@@ -2,7 +2,7 @@ import { modal } from "../modal.js";
 import { URL } from "../url.js";
 import { PostComments } from "./fetchPostComment.js";
 import { getSession } from "./getSession.js";
-const dataMain = document.querySelector('[data-main]')
+const dataMain = document.querySelector('[data-main]');
 
 interface DataPhoto {
     id:number;
@@ -16,13 +16,13 @@ interface DataPhoto {
 }
 
 export async function fetchPhoto(id:number){
-    const response = await fetch(URL + `get/photo/${id}`)
+    const response = await fetch(URL + `get/photo/${id}`);
     const dados:Record<string,DataPhoto> & Record<string,any> = await response.json();
 
-    console.log(dados.comentarios)
-    if(!dataMain) return
+    console.log(dados.comentarios);
+    if(!dataMain) return;
 
-    dataMain.innerHTML = ''
+    dataMain.innerHTML = '';
     dataMain.innerHTML =/*HTML */ `
 
     <div data-conteudo-modal class='modal-item'>
@@ -47,7 +47,7 @@ export async function fetchPhoto(id:number){
                 </div>
                 <div class="div-comentrarios">
                     ${dados.comentarios.map((item:Record<string,any>) =>{
-                        return `<span>${item.user_name}:</span>` + `<p>${item.comment}</p>`  
+                        return `<span>${item.user_name}:</span>` + `<p>${item.comment}</p>`;  
                     })}
                 </div>
             </div>
@@ -64,12 +64,12 @@ export async function fetchPhoto(id:number){
         </div>
     </div>
         
-    `
-    const htmlElementPost = document.querySelector('[data-conteudo-modal]')
+    `;
+    const htmlElementPost = document.querySelector('[data-conteudo-modal]');
     if(htmlElementPost instanceof HTMLElement){
-        const  postCommentClass = new PostComments(id,htmlElementPost).init()
+         new PostComments(id,htmlElementPost).init();
     }
-    modal()
+    modal();
 }
 
 

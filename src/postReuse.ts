@@ -14,18 +14,18 @@ export async function postFetch<T>(path:string,data:DataForm):Promise<boolean | 
         },
         body:JSON.stringify(data)
         
-    })
+    });
 
-    console.log(response.status)
+    console.log(response.status);
     if(response.status === 400 || response.status === 404){
-        return false
+        return false;
     }else{   
         return response.json();
     }
 }
 
 export function erroPostElement(element:HTMLElement,message:string){
-    element.style.color = 'red'
-    element.style.margin = '0.6rem 0'
-    element.innerText = message
+    element.style.color = 'red';
+    element.style.margin = '0.6rem 0';
+    element.innerText = message;
 }
