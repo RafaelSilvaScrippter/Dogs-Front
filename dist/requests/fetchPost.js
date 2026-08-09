@@ -20,7 +20,6 @@ export async function fetchPhoto(id) {
         
                 <div class='author-e-views'>
                     <a href='../pages/author.html?user=${dados.post.user_name}'>
-                    teste
                     <span class='author'>@${dados.post.user_name}</span>
                     </a>
                     <span class='views-modal'>${dados.post.views}</span>
