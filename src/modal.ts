@@ -1,13 +1,13 @@
-import { fetchDados } from "./requests/fetchPosts.js"
+import { fetchDados } from "./requests/fetchPosts.js";
 
 export function modal(){
-    const dataModal = document.querySelector('[data-main]')
-    const dataConteudoModal = dataModal?.querySelector('[data-conteudo-modal]')
+    const dataModal = document.querySelector('[data-main]');
+    const dataConteudoModal = dataModal?.querySelector('[data-conteudo-modal]');
 
-    dataModal?.classList.add('modal-on')
+    dataModal?.classList.add('modal-on');
 
       if(dataModal instanceof HTMLElement){
-        dataModal.style.display = 'grid'
+        dataModal.style.display = 'grid';
     }
 
     if(dataModal instanceof HTMLElement){
@@ -18,14 +18,14 @@ export function modal(){
                 if(dataConteudoModal){
                     if(e.target instanceof Node){
                         if(e.target.contains(dataConteudoModal)){
-                            dataModal.classList.remove('modal-on')
-                            dataModal.style.display = 'none'
-                            fetchDados()
+                            dataModal.classList.remove('modal-on');
+                            dataModal.style.display = 'none';
+                            fetchDados();
                         }
                     }
                 }
             }
         }
-    })
+    });
 }
 }

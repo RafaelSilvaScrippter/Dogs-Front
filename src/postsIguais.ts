@@ -10,10 +10,10 @@ interface DataPhotos {
 
 export function dadosPOsts(dados:DataPhotos[]){
 
-       const dataMainPosts = document.querySelector('[data-main-posts]')
+       const dataMainPosts = document.querySelector('[data-main-posts]');
 
-       if(!dataMainPosts) return
-       dataMainPosts.innerHTML = ''
+       if(!dataMainPosts) return;
+       dataMainPosts.innerHTML = '';
        dados.forEach((post) =>{
            if(dataMainPosts &&  typeof dados === 'object' && 'id' in post && 'views' in post){
 
@@ -24,18 +24,18 @@ export function dadosPOsts(dados:DataPhotos[]){
                         <span class='views-span'>${post.views}</span>
                     </div>
                 </li>
-                `
+                `;
             }
-            })
-         const dataElementPhoto = dataMainPosts.querySelectorAll('[data-photo]')
+            });
+         const dataElementPhoto = dataMainPosts.querySelectorAll('[data-photo]');
     
           dataElementPhoto.forEach((item) =>{
                 item.addEventListener('click',() =>{
                     if(item instanceof HTMLDivElement){
-                        if(!item.dataset.photo) return 
-                        fetchPhoto(parseInt(item.dataset.photo))
+                        if(!item.dataset.photo) return; 
+                        fetchPhoto(parseInt(item.dataset.photo));
                     }
-                })
-              })
+                });
+              });
 
 }

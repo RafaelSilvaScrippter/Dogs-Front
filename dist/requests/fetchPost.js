@@ -53,7 +53,7 @@ export async function fetchPhoto(id) {
     `;
     const htmlElementPost = document.querySelector('[data-conteudo-modal]');
     if (htmlElementPost instanceof HTMLElement) {
-        const postCommentClass = new PostComments(id, htmlElementPost).init();
+        new PostComments(id, htmlElementPost).init();
     }
     modal();
 }

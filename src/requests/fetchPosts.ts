@@ -11,8 +11,8 @@ interface DataPhotos {
 }
 
 export async function fetchDados(){
-    const response = await fetch(URL+'get/photos')
-    const dados:Record<string, DataPhotos[]>= await response.json()
-    const {posts} = dados
-    dadosPOsts(posts)
+    const response = await fetch(URL+'get/photos');
+    const dados:Record<string, DataPhotos[]>= await response.json();
+    const {posts} = dados;
+    dadosPOsts(posts);
 }

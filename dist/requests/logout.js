@@ -15,11 +15,10 @@ export class LogoutPost {
         });
         const dados = await response.json();
         window.location.pathname = '../index.html';
-        console.log(response, dados);
     }
     async eventsClickElement() {
         this.element?.forEach((item) => {
-            item.addEventListener('click', async (e) => {
+            item.addEventListener('click', async () => {
                 await this.fetchLogout();
             });
         });

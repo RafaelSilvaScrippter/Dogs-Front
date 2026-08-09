@@ -6,7 +6,6 @@ export async function getSession() {
         credentials: 'include'
     });
     const dados = await response.json();
-    console.log(dados);
     if (response.status && response.status === 200) {
         if (headerLink instanceof HTMLElement) {
             headerLink.innerText = dados.username;

@@ -12,14 +12,14 @@ interface DataPhoto {
 }
 
 export async function getPhotoId(){
-    const dataMainPhoto = document.querySelector('[data-main-photo]')
-    const url = window.location.search
-    const id = url.replace('?','').replace('.html','')
-    const response = await fetch(URL+`get/photo/${id}`)
-    const dados:Record<string,DataPhoto>  = await response.json()
+    const dataMainPhoto = document.querySelector('[data-main-photo]');
+    const url = window.location.search;
+    const id = url.replace('?','').replace('.html','');
+    const response = await fetch(URL+`get/photo/${id}`);
+    const dados:Record<string,DataPhoto>  = await response.json();
     
-    console.log(dados)
-    if(!dataMainPhoto) return
+    console.log(dados);
+    if(!dataMainPhoto) return;
 
     if(dataMainPhoto &&
         typeof dados === 'object' &&
@@ -55,6 +55,6 @@ export async function getPhotoId(){
                 </div>
                 </div>
                 
-                `
+                `;
     }
 }

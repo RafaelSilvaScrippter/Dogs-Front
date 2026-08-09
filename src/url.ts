@@ -1,1 +1,1 @@
-export const URL:string  = 'https://dogs-srwx.onrender.com/'
+export const URL:string  = 'https://dogs-srwx.onrender.com/';

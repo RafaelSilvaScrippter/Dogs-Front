@@ -12,17 +12,17 @@ import { RouteProtected } from "./protectRoute.js";
 
 
 
-menuMobile()
-getSession()
-getPhotoId()
-fetchDados()
-paramUser()
-criarConta()
-postUsers()
-fetchLogin()
-const protectedRoute = new RouteProtected('[data-header-link]')
-protectedRoute.init()
+menuMobile();
+getSession();
+getPhotoId();
+fetchDados();
+paramUser();
+criarConta();
+postUsers();
+fetchLogin();
+const protectedRoute = new RouteProtected('[data-header-link]');
+protectedRoute.init();
 
-const fetchLogout = new LogoutPost('[data-logout]')
+const fetchLogout = new LogoutPost('[data-logout]');
 
-fetchLogout.init()
+fetchLogout.init();
