@@ -6,7 +6,6 @@ export function fetchLogin() {
     const dataSpanSenha = document.querySelector('[data-erro-senha]');
     const dataErroLogin = document.querySelector('[data-erro-login]');
     let form;
-    ;
     if (formLogin instanceof HTMLFormElement) {
         formLogin?.addEventListener('submit', (e) => {
             e.preventDefault();

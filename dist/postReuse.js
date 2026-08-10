@@ -8,6 +8,7 @@ export async function postFetch(path, data) {
         },
         body: JSON.stringify(data)
     });
+    console.log({ response });
     console.log(response.status);
     if (response.status === 400 || response.status === 404) {
         return false;

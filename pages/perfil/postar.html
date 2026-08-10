@@ -77,14 +77,20 @@
             </div>
         </div>
         <div class="container-g conteudo postart-foto">
-            <form class="formulario-login" action="">
+            <form data-form-publish-post class="formulario-login"  method="post">
                 <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome">
+                <input data-input-post type="text" id="nome" name="nome">
+                <span data-erro-post-span></span>
                 <label for="peso">Peso</label>
-                <input type="text" id="peso" name="peso">
-                <label for="idade">Nome</label>
-                <input type="text" id="idade" name="idade">
-                <input type="file" name="file" id="file">
+                <input data-input-post type="text" id="peso" name="peso">
+                <span data-erro-post-span></span>
+                <label for="idade">Idade</label>
+                <input data-input-post type="text" id="idade" name="idade">
+                <span data-erro-post-span></span>
+                <input data-input-post type="file" name="src" id="file">
+                <span data-erro-post-span></span>
+                
+                <button class="btn-cadastro">publicar</button>
             </form>
         </div>
     </main>
