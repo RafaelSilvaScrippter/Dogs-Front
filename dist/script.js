@@ -8,6 +8,7 @@ import { getSession } from "./requests/getSession.js";
 import { LogoutPost } from "./requests/logout.js";
 import { menuMobile } from "./menuMobile.js";
 import { RouteProtected } from "./protectRoute.js";
+import { PostPhoto } from "./requests/postPhoto.js";
 menuMobile();
 getSession();
 getPhotoId();
@@ -20,4 +21,5 @@ const protectedRoute = new RouteProtected('[data-header-link]');
 protectedRoute.init();
 const fetchLogout = new LogoutPost('[data-logout]');
 fetchLogout.init();
+const publishPhoto = new PostPhoto().init();
 //# sourceMappingURL=script.js.map
