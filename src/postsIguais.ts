@@ -30,8 +30,9 @@ export function dadosPOsts(dados:DataPhotos[]){
          const dataElementPhoto = dataMainPosts.querySelectorAll('[data-photo]');
     
           dataElementPhoto.forEach((item) =>{
-                item.addEventListener('click',() =>{
-                    if(item instanceof HTMLDivElement){
+              item.addEventListener('click',() =>{
+                  if(item instanceof HTMLDivElement){
+                        console.log(item)
                         if(!item.dataset.photo) return; 
                         fetchPhoto(parseInt(item.dataset.photo));
                     }

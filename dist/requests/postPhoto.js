@@ -38,8 +38,6 @@ export class PostPhoto {
                         body: file
                     });
                     const dados = await fetchUpload.json();
-                    console.log(dados);
-                    console.log(dados.src);
                     const postPublish = await fetch(URL + 'post/publicacao', {
                         method: "POST",
                         headers: {
@@ -48,7 +46,6 @@ export class PostPhoto {
                         credentials: 'include',
                         body: JSON.stringify({ nome: "Apollo", idade: '3', peso: '6', src: dados.src })
                     });
-                    console.log(postPublish);
                 }
             }
         }

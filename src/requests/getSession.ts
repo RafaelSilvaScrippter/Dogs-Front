@@ -1,4 +1,5 @@
 import { URL } from "../url.js";
+import { GetMyPhotos } from "./getMyPhotos.js";
 
 export async function getSession(){
     const headerLink = document.querySelector('[data-header-link]');
@@ -8,6 +9,7 @@ export async function getSession(){
     });
     const dados = await response.json();
     
+    new GetMyPhotos(dados.username).init();
 
     if(response.status && response.status === 200){
         if(headerLink instanceof HTMLElement){
