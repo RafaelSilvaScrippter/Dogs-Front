@@ -6,18 +6,16 @@ export class LogoutPost {
     }
     async fetchLogout() {
         await fetch(URL + 'auth/logout', {
-            method: 'POST',
-            headers: {
-                'Content-Type': "application/json"
-            },
+            method: 'DELETE',
             credentials: 'include',
-            body: JSON.stringify({ email: "nativaeleven@gmail.com" })
         });
+        console.log('hello');
         window.location.pathname = '../index.html';
     }
     async eventsClickElement() {
         this.element?.forEach((item) => {
-            item.addEventListener('click', async () => {
+            item.addEventListener('click', async (e) => {
+                e.preventDefault();
                 await this.fetchLogout();
             });
         });
