@@ -11,7 +11,7 @@ export class LogoutPost {
                 'Content-Type': "application/json"
             },
             credentials: 'include',
-            body: JSON.stringify({ email: "rafa@gmail.com" })
+            body: JSON.stringify({ email: "nativaeleven@gmail.com" })
         });
         window.location.pathname = '../index.html';
     }

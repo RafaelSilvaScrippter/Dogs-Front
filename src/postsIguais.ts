@@ -8,11 +8,26 @@ interface DataPhotos {
     views:number;
 }
 
-export function dadosPOsts(dados:DataPhotos[]){
+export function dadosPOsts(dados:DataPhotos[] | Record<'message',string>){
 
        const dataMainPosts = document.querySelector('[data-main-posts]');
 
        if(!dataMainPosts) return;
+
+       if(!Array.isArray(dados)){
+
+            if(dataMainPosts instanceof HTMLElement){
+                dataMainPosts.style.display = 'block'
+                dataMainPosts.style.textAlign = 'center'
+                dataMainPosts.style.margin = '2rem 0'
+            }
+            dataMainPosts.innerHTML = /*HTML */`<p>${dados.message}</p>` 
+
+            return
+
+       }
+       
+
        dataMainPosts.innerHTML = '';
        dados.forEach((post) =>{
            if(dataMainPosts &&  typeof dados === 'object' && 'id' in post && 'views' in post){
