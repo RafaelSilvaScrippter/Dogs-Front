@@ -11,7 +11,8 @@ export class GetMyPhotos {
         dadosPOsts(dados);
     }
     async init() {
-        await this.getPhoto();
+        if (location.pathname.includes('pages'))
+            await this.getPhoto();
     }
 }
 //# sourceMappingURL=getMyPhotos.js.map

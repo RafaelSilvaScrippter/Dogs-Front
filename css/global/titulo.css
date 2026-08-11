@@ -17,6 +17,12 @@
     position: relative;
 }
 
+@media(max-width:600px){
+    .titulo-modal{
+        font-size: 1.6rem;
+    }
+}
+
 .grid-final{
     cursor: initial;
     grid-column: 1 / -1;
