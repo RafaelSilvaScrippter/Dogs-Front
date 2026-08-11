@@ -79,7 +79,9 @@ export async function criarConta(){
                 }
             }
             else{
-                    window.location.href = '../pages/perfil/perfil.html';
+                const dados = await postFetch('auth/login',data);
+                console.log(dados)
+                window.location.href = '../pages/perfil/perfil.html';
             }
         }
     }
