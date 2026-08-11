@@ -10,6 +10,7 @@ import { LogoutPost } from "./requests/logout.js";
 import { menuMobile } from "./menuMobile.js";
 import { RouteProtected } from "./protectRoute.js";
 import { PostPhoto } from "./requests/postPhoto.js";
+import { PhotoPreviw } from "./previewPhotoPublish.js";
 
 
 
@@ -29,3 +30,5 @@ const fetchLogout = new LogoutPost('[data-logout]');
 fetchLogout.init();
 
 const publishPhoto = new PostPhoto().init()
+
+const previewImgaPost = new PhotoPreviw().init()

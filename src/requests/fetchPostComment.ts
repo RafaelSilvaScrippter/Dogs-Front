@@ -1,4 +1,5 @@
 import { URL } from "../url.js";
+import { fetchPhoto } from "./fetchPost.js";
 
 export class PostComments{
     dataEnvComment:HTMLElement|null;
@@ -29,9 +30,7 @@ export class PostComments{
             credentials:'include',
             body:JSON.stringify({comment:commentContent})
         });
-        console.log(response);
         const dados = await response.json();
-        console.log(dados);
     }
 
 
@@ -39,8 +38,8 @@ export class PostComments{
         if(this.dataEnvComment){
             this.dataEnvComment.addEventListener('click', async() =>{
                 if(this.dataInputContentComment){
-                    console.log('fazendo o post comment');
                     await this.fetchPostComment();
+                    await fetchPhoto(this.id)
                 }
             });
         }
