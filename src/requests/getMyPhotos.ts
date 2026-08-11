@@ -19,6 +19,7 @@ export class GetMyPhotos{
 
 
     async init(){
+        if(location.pathname.includes('pages'))
         await this.getPhoto()
     }
 
